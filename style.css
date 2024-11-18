@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: system-ui, -apple-system,;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    color: white;
+    padding: 2px 4px 4px ;
+    background-color: color-mix(in srgb, black 80%, grey 20%);
+}
+
+.home {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.isi span{
+    animation: textfade 1.2s ease-out;
+}
+
+.isi h3 {
+    animation: textfade 1.8s ease-in;
+}
+
+.isi h1{
+    animation: textfade 2.8s ease-in-out;
+}
+
+.foto img{
+    width: 20vw;
+    height: 45vh;
+    border-radius: 50%;
+    box-shadow: 20px;
+    object-fit: cover;
+    animation: foto 2s ease-out ;
+    transition: 1s;
+    margin: 6rem 8rem;
+    border: 2px solid white;
+}
+
+.isi h3{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.isi h3:nth-of-type(2) {
+    margin-bottom: 32px;
+}
+
+.isi p {
+    font-size: 1.3rem ;
+    animation : textin 2s;
+    width: 90%;
+    text-align: justify;
+}
+
+span {
+    color: darkcyan;
+    position: relative;
+}
+
+.judul {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.isi-konten p{
+    text-align: justify;
+    line-height: 1;
+    margin: 10px 0 20px;
+
+}
+section {
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 10rem 4rem;
+}
+
+.pengalaman h2{
+    margin : 2rem
+}
+
+.container-pengalaman {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    transform: scale(1);
+}
+
+.container-pengalaman .pengalaman-isi {
+    flex: 1 1 30rem;
+    padding: 38px 24px 88px;
+    border-radius: 2rem ;
+    margin : 1rem 1rem 1rem 1rem;
+    border:  2px solid black;
+    background-color: darkslategray;
+    transition: 0.3s ease-in;
+}
+
+.pengalaman-isi h3{
+    color: peachpuff;
+    line-height: 48px;
+    text-align: center;
+}
+
+.pengalaman-isi p{
+    text-align: justify;
+}
+
+.portofolio h2{
+    margin-bottom: 40px;
+}
+
+.container-porto {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.container-porto .porto-box{
+    position: relative;
+    border-radius: 3rem;
+    box-shadow: 1 1 12px;
+    overflow: hidden;
+    display: flex;
+}
+
+.porto-box img{
+    width: 100%;
+    transition: .4s ease-in-out;
+}
+
+.porto-box .isi-porto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( to top, aqua, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    padding: 0 30px;
+    transform: translateY(100%);
+    transition: .6s ease-in;
+}
+
+.isi-porto h4{
+    font-size: 36px;
+}
+
+.isi-porto p {
+    font-size: 14px;
+    margin: 13px 12px 15px;
+    text-align: justify;
+}
+
+.contact h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 18px auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    color: aquamarine;
+    background-color: color-mix(in srgb, gray 80%, black 20%);
+    border-radius: 10px ;
+    margin: 12px 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 2rem 12rem;
+    background-color: color-mix(in srgb, aqua 70%, whitesmoke 30%);
+    border-color: white;
+    border: 4px;
+}
+
+::placeholder {
+    color: whitesmoke;
+}
+
+#navbar {
+    background-color: #333;
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 100;
+}
+
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    transition: .4s ease-out;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#navbar a:hover {
+    color: lightseagreen;
+}
+
+.container-pengalaman .pengalaman-isi:hover {
+    border-color: antiquewhite;
+    transform: scale(1.04);
+}
+
+.porto-box:hover img {
+    transform: scale(1.1);
+}
+
+.porto-box:hover .isi-porto {
+    transform: translateY(0);
+}
+
+.foto img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes textin{
+    0% { transform: translateX(-900px); opacity: 0;} 
+    50% { transform: translateX(0px); opacity: 0.5;}
+}
+
+@keyframes foto{
+    0% { transform: translateY(-9000px); opacity: 0; transform: scale(0.2); filter: blur(10px);}
+    30% { transform: scale(0.7); opacity: 0.8; filter: blur(4px);}
+}
+
+@keyframes textfade{
+    0% {  opacity: 0;}
+    40% {  opacity: 0.5;}
+    60% { opacity: 1;}
+}
+
+@media (max-width: 1280px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 970px ) {
+    body {
+        padding: 1.8rem 1.8rem 1rem 1.8rem;
+        overflow-x: hidden;
+        left: 0;
+        right: 0;
+        justify-content: center;
+    }
+
+    section {
+        padding: 2rem 1.2rem;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .isi h3 {
+        font-size: 2.4rem;
+    }
+
+    .isi h1{
+        font-size: 4.8rem;
+    }
+
+    .foto img{
+        width: 45vw;
+        margin-top: 3.4rem;
+    }
+
+    .isi p{
+        font-size: 1.5rem;
+    }
+    #navbar{
+        width: 100%;
+    }
+    #navbar a{
+        padding : 8px;
+        font-size: 1.4rem;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: center;
+        left: 0;
+        right: 0;
+    }
+
+    .about h2 {
+        width: 100%;
+        left: 0;
+        right: 0;
+        padding-right: 1rem;
+    }
+
+    .about p{
+        font-size: 1.5rem;
+        margin-top: 20px;
+        width: 95%;
+        text-align: center;
+    }
+
+    .pengalaman h2{
+        margin-bottom: 2.5rem ;
+        padding: 0;
+    }
+
+    .pengalaman p{
+        font-size: 1.5rem;
+    }
+
+    .container-pengalaman{
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1.2rem;
+        transform: scale(0.8);
+    }
+
+    .container-pengalaman .pengalaman-isi {
+        margin-left: 1.2rem ;
+        margin-right: 1.2rem;
+        font-size: 3rem;
+    }
+
+    .pengalaman-isi p {
+        font-size: 2rem;
+    }
+
+    .portofolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .container-porto{
+        margin-right: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .portofolio h2 {
+        margin-bottom: 2rem;
+    }
+
+    .container-porto {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 1.2rem ;
+        left: 0;
+        right: 0;
+    }
+
+    .isi-porto h4 {
+        font-size: 24px;
+    }
+
+    .isi-porto p {
+        font-size: 12px;
+        margin: 10px 10px 8px;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .contact form{ 
+        width: fit-content;
+        left: 0;
+        right: 0;
+    }
+
+    .contact form .input-box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 97%;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    margin: 12px 0;
+    justify-content: center;
+    resize: none;
+}
+
+.contact form textarea{
+    margin-right:2.1rem ;
+}
+
+}
+
+
+@media(max-width : 400px ) {
+    .foto img {
+        width: 75vw;
+        border: 2px solid white;
+    }
+}
+
+
